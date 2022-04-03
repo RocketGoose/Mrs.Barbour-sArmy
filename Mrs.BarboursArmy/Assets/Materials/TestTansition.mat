@@ -78,10 +78,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_ba9281810b5e494da1ca0a4c696b79f5: 1
+    - Vector1_090f405ceb6b473798e1b43b0fc4b816: 0
     - Vector1_3e7261b0e5d047e0acacdc515be3ef91: 1
-    - Vector1_813c00055b4945a384124239cb7d0c56: 0.6
+    - Vector1_813c00055b4945a384124239cb7d0c56: 0.77
     - Vector1_aeae6b4c22b04d0bbd901ad77d7c0d99: 0.16
-    - Vector1_e1196877db0141c6951859d9c8a11ff6: 0.19
+    - Vector1_e1196877db0141c6951859d9c8a11ff6: 0.05
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -107,6 +108,9 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
+    - _TransitionStartTime: 363.2678
+    - _Trigger: 1
+    - _Trigger_1: 0
     - _UVSec: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
@@ -115,12 +119,13 @@ Material:
         a: 0}
     - Color_5be57fd9a7b246e0a7140f2a4fb5a002: {r: 45.254833, g: 0.2134667, b: 13.472065,
         a: 1}
-    - Color_7070ba8bc2ed4b0ca25f7843f8290ce5: {r: 0.764151, g: 0.38568, b: 0.38568,
+    - Color_7070ba8bc2ed4b0ca25f7843f8290ce5: {r: 0.14079742, g: 0.2109383, b: 0.26415092,
         a: 0}
-    - GlowColour: {r: 17.01388, g: 17.01388, b: 17.01388, a: 0}
+    - GlowColour: {r: 346.33484, g: 168.17906, b: 58.4351, a: 0}
     - Vector3_483c97ad7fad4a89a5cd85c2522f33a3: {r: 1.42, g: 0.18, b: -0.03, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _TransitionPoint: {r: 2.4509962, g: 1.1718266, b: 6.724228, a: 0}
   m_BuildTextureStacks: []
