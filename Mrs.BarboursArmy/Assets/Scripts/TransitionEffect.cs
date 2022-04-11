@@ -1,30 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TransitionEffect : MonoBehaviour
 {
+
+
     Material material;
 
     float triggerVal;
 
-    void Start()
+    void OnEnable()
     {
-        material = GetComponent<MeshRenderer>().sharedMaterial;
-        triggerVal = 0;
-        material.SetFloat("_Trigger", triggerVal);
+        ActivateTrigger.trigger += DoTrigger;
+
     }
 
-    void Update()
+    void OnDisable()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            CastClickRay();
-        }
+        ActivateTrigger.trigger -= DoTrigger;
     }
-
-    void CastClickRay()
+    void DoTrigger()
     {
+        Debug.Log("Activate");
         var camera = Camera.main;
         var mousePos = Input.mousePosition;
         var ray = camera.ScreenPointToRay(mousePos);
@@ -32,6 +31,12 @@ public class TransitionEffect : MonoBehaviour
         {
             StartTansition(hitInfo.point);
         }
+    }
+    void Start()
+    {
+        material = GetComponent<MeshRenderer>().sharedMaterial;
+        triggerVal = 0;
+        material.SetFloat("_Trigger", triggerVal);
     }
 
     void StartTansition(Vector3 center)
@@ -41,5 +46,7 @@ public class TransitionEffect : MonoBehaviour
         material.SetFloat("_Trigger", triggerVal);
         material.SetFloat("_TransitionStartTime", Time.time);
     }
+
+
 
 }
