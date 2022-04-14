@@ -12,7 +12,10 @@ public class ActivateTrigger : MonoBehaviour
     
     public InputActionReference activate = null;
 
-    public static event Action trigger;
+    //public static event Action trigger;
+
+    public delegate void TriggerClick(Vector3 a);
+    public static event TriggerClick OnTrigger;
 
     XRRayInteractor rayInteractor;
 
@@ -28,8 +31,12 @@ public class ActivateTrigger : MonoBehaviour
         if(rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit raycastHit) == true)
         {
             Debug.Log(raycastHit.point);
-            trigger?.Invoke();
-            Debug.Log("trigger invoked");
+            if (OnTrigger != null)
+            {
+                OnTrigger(raycastHit.point);
+                Debug.Log("trigger invoked");
+            }
+            //trigger?.Invoke();
         }
 
     }

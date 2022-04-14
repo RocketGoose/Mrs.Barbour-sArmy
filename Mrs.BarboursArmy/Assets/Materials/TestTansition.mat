@@ -20,6 +20,22 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_6e31af3e3f014acebc9e2675c0176560:
+        m_Texture: {fileID: 2800000, guid: cd937110e26d31b419557a6d73a3eec1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_790a6393f8da45de8a1b96f0b0c8e35c:
+        m_Texture: {fileID: 2800000, guid: a268ae63d101f904e8b7665798a26b70, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_bf1ba44f51394481bd6df819ad57932f:
+        m_Texture: {fileID: 2800000, guid: 298ad76e727415b4d8642609c16c62a3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_c26161c4fe9141a2824e276cad642282:
+        m_Texture: {fileID: 2800000, guid: 8365fe3dfb91f334a8627619550090b5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -108,8 +124,8 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _TransitionStartTime: 2.1676025
-    - _Trigger: 0
+    - _TransitionStartTime: 58.91539
+    - _Trigger: 1
     - _Trigger_1: 0
     - _UVSec: 0
     - _WorkflowMode: 1
@@ -127,5 +143,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _TransitionPoint: {r: 2.2101123, g: 0.8840449, b: 7.1248164, a: 0}
+    - _TransitionPoint: {r: 2.6584768, g: 1.0662211, b: 6.760342, a: 0}
   m_BuildTextureStacks: []
