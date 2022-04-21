@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 public class TransitionEffect : MonoBehaviour
 {
 
-
     Material material;
 
     float triggerVal;
@@ -21,19 +20,17 @@ public class TransitionEffect : MonoBehaviour
     {
         ActivateTrigger.OnTrigger -= DoTrigger;
     }
-    void DoTrigger(Vector3 triggerPoint)
+    void DoTrigger(Vector3 triggerPoint, string hitName)
     {
+        string _thisName = gameObject.name;
         Debug.Log("Activate");
-        StartTransition(triggerPoint);
-        /*
-        var camera = Camera.main;
-        var mousePos = Input.mousePosition;
-        var ray = camera.ScreenPointToRay(mousePos);
-        if(Physics.Raycast(ray, out var hitInfo) && hitInfo.collider.gameObject == gameObject)
+
+
+        if(hitName.Contains(_thisName) == true)
         {
-            StartTransition(hitInfo.point);
+            StartTransition(triggerPoint);
+           // Debug.Log("Ray hit:" + hitName + " This:" + _thisName + hitName.Contains(_thisName));
         }
-        */
     }
     void Start()
     {

@@ -14,7 +14,7 @@ public class ActivateTrigger : MonoBehaviour
 
     //public static event Action trigger;
 
-    public delegate void TriggerClick(Vector3 a);
+    public delegate void TriggerClick(Vector3 a, string b);
     public static event TriggerClick OnTrigger;
 
     XRRayInteractor rayInteractor;
@@ -33,7 +33,7 @@ public class ActivateTrigger : MonoBehaviour
             Debug.Log(raycastHit.point);
             if (OnTrigger != null)
             {
-                OnTrigger(raycastHit.point);
+                OnTrigger(raycastHit.point, raycastHit.transform.gameObject.name);
                 Debug.Log("trigger invoked");
             }
             //trigger?.Invoke();

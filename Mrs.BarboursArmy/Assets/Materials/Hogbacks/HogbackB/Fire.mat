@@ -119,7 +119,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _TransitionStartTime: 17.765802
+    - _TransitionStartTime: 146.62291
     - _Trigger: 1
     - _WorkflowMode: 1
     - _ZWrite: 1
@@ -129,7 +129,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _TransitionPoint: {r: 0.083814025, g: 0.14306772, b: 1.9687238, a: 0}
+    - _TransitionPoint: {r: -1.218119, g: -0.33733058, b: 1.9998188, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &987689259674188254
 MonoBehaviour:
