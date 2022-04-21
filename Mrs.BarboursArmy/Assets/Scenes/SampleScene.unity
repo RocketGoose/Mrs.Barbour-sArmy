@@ -272,20 +272,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 870036330}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &118938940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118938939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75e20bd596176d3459bdc83ee373a420, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 0}
-  triggerVal: 0
 --- !u!64 &118938941
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -732,20 +718,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1528188220}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &856735681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856735680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e8d87fd04840b4d8b4bb8af7d13f31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 0}
-  triggerVal: 0
 --- !u!64 &856735682
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2630,6 +2602,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e12996443e0f76b4c8924aae5ecbbc4d,
         type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e12996443e0f76b4c8924aae5ecbbc4d,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: db88b5d271192b74f823e259f38ca0a5, type: 2}
@@ -2652,20 +2629,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 207275739}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1982117194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1982117193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35a3f73e01589494cae2cdd1999a5ad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 0}
-  triggerVal: 0
 --- !u!64 &1982117195
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2698,20 +2661,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1693511300}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2001934488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001934487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee5895abafd6d74c9ac6a2e8b295f9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 0}
-  triggerVal: 0
 --- !u!64 &2001934489
 MeshCollider:
   m_ObjectHideFlags: 0
