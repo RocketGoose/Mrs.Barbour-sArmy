@@ -11,7 +11,7 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 7c2e557a1a11ee341aa1d9cabb524e26,
     type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -95,8 +95,10 @@ Material:
     m_Floats:
     - Boolean_ba9281810b5e494da1ca0a4c696b79f5: 1
     - Vector1_090f405ceb6b473798e1b43b0fc4b816: 0
+    - Vector1_3cbe948afb1c446c8216d4cedb591764: 1
     - Vector1_3e7261b0e5d047e0acacdc515be3ef91: 1
     - Vector1_813c00055b4945a384124239cb7d0c56: 0.77
+    - Vector1_98eb1c010b8b44dcacb9ef4add7225f5: 0.1
     - Vector1_aeae6b4c22b04d0bbd901ad77d7c0d99: 0.16
     - Vector1_e1196877db0141c6951859d9c8a11ff6: 0.05
     - _AlphaClip: 0
@@ -125,7 +127,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _TransitionStartTime: 58.91539
-    - _Trigger: 1
+    - _Trigger: 0
     - _Trigger_1: 0
     - _UVSec: 0
     - _WorkflowMode: 1
