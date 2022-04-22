@@ -6,10 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/StartScene.unity
+    guid: 98e51971f0af5e041842874702000ae6
+  - enabled: 1
+    path: Assets/Scenes/PointcloudScene.unity
+    guid: 8c95e65f7ca8eff468b6327d23281ec7
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ebed0d764d29bd842be753abffe8f84a,
+      type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: e2cbae857a92b7342820f0e92742d437,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 97345a191c9c23c41b8496678577b2d5,
       type: 2}
