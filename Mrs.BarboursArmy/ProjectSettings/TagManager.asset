@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Hog
-  - testObject
+  - Air
+  - Earth
+  - Fire
+  - Water
   layers:
   - Default
   - TransparentFX
