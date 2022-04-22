@@ -5,7 +5,7 @@ using TMPro;
 
 public class SubtitleGenerator : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI subtitleText = default;
+    [SerializeField] TextMeshProUGUI subtitleText ;
 
     public static SubtitleGenerator instance;
 

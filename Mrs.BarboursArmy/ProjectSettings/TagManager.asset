@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hog
+  - testObject
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,7 @@ public class SubtitleScript : MonoBehaviour
     }
     
         
-    //delays lines
+    //delay lines
     IEnumerator IntroSequence()
     {
             yield return new WaitForSeconds(1);
