@@ -94,7 +94,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_813c00055b4945a384124239cb7d0c56: 0.7
-    - Vector1_e1196877db0141c6951859d9c8a11ff6: 0.05
+    - Vector1_e1196877db0141c6951859d9c8a11ff6: 0.1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -119,17 +119,17 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _TransitionStartTime: 146.62291
+    - _TransitionStartTime: 10.6849
     - _Trigger: 1
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - GlowColour: {r: 19.071913, g: 2.276528, b: 0, a: 0}
+    - GlowColour: {r: 2, g: 0.047276303, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _TransitionPoint: {r: -1.218119, g: -0.33733058, b: 1.9998188, a: 0}
+    - _TransitionPoint: {r: 1.4353465, g: 0.34106684, b: 2.2472105, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &987689259674188254
 MonoBehaviour:

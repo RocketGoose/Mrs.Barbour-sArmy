@@ -370,6 +370,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HogbackB_v2_Water
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 25c475a5571974e4698ddb708d192de7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25c475a5571974e4698ddb708d192de7, type: 3}
 --- !u!4 &207275740 stripped
@@ -923,6 +928,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HogbackB_v2_Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c76c4b376be0ec64bbff3a5ff1f3731d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Earth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c76c4b376be0ec64bbff3a5ff1f3731d, type: 3}
@@ -1674,6 +1684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activate: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
+  gameManager: {fileID: 0}
 --- !u!1 &1178045493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,6 +2218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activate: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  gameManager: {fileID: 0}
 --- !u!1 &1375742770
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,6 +2434,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HogbackB_v2_Fire
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6374cff470cd7de4a8643d83c195d0e1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fire
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6374cff470cd7de4a8643d83c195d0e1, type: 3}
 --- !u!4 &1528188221 stripped
@@ -2615,6 +2632,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HogbackB_v2_Air
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e12996443e0f76b4c8924aae5ecbbc4d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Air
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e12996443e0f76b4c8924aae5ecbbc4d, type: 3}
 --- !u!4 &1693511301 stripped
@@ -2794,4 +2816,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2126000399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2126000401}
+  - component: {fileID: 2126000400}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2126000400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126000399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a116a5c83002b544dbae12f1295ac5e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isControlLock: 0
+  hogFireClicked: 0
+  hogAirClicked: 0
+  hogWaterClicked: 0
+  hogEarthClicked: 0
+  hogCompleat: 0
+  hogAir: {fileID: 0}
+  hogEarth: {fileID: 0}
+  hogWater: {fileID: 0}
+  hogFire: {fileID: 0}
+--- !u!4 &2126000401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126000399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0661729, y: -0.3607062, z: 2.0284543}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

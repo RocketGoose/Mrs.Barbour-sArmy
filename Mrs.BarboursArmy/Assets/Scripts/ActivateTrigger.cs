@@ -12,6 +12,8 @@ public class ActivateTrigger : MonoBehaviour
     
     public InputActionReference activate = null;
 
+    public GameManager gameManager;
+
     //public static event Action trigger;
 
     public delegate void TriggerClick(Vector3 a, string b);
@@ -23,12 +25,13 @@ public class ActivateTrigger : MonoBehaviour
     {
         activate.action.performed += DoActivate;
         rayInteractor = GetComponent<XRRayInteractor>();
+        gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
     }
 
     void DoActivate(InputAction.CallbackContext obj)
     {
 
-        if(rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit raycastHit) == true && GameManager.isControlLock == false)
+        if(rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit raycastHit) == true && gameManager.isControlLock == false)
         {
             Debug.Log(raycastHit.point);
             if (OnTrigger != null)
