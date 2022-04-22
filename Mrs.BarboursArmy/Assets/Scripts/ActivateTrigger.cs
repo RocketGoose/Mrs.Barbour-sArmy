@@ -28,7 +28,7 @@ public class ActivateTrigger : MonoBehaviour
     void DoActivate(InputAction.CallbackContext obj)
     {
 
-        if(rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit raycastHit) == true)
+        if(rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit raycastHit) == true && GameManager.isControlLock == false)
         {
             Debug.Log(raycastHit.point);
             if (OnTrigger != null)
