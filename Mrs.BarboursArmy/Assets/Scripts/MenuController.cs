@@ -20,9 +20,11 @@ public class MenuController : MonoBehaviour
 
     void DoTrigger(Vector3 triggerPoint, string _hitName)
     {
+        Debug.Log("menu triggered");
         if(_hitName.Contains(thisName) == true)
         {
             MenuFunctions();
+            Debug.Log("start menu functions");
         }
     }
 
@@ -30,6 +32,7 @@ public class MenuController : MonoBehaviour
     {
         if(thisName.Contains(gameManager.startButton.name) == true)
         {
+            Debug.Log("start button");
             gameManager.sceneInt ++ ;
         }
     }
@@ -37,11 +40,5 @@ public class MenuController : MonoBehaviour
     {
         gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
         thisName = gameObject.name;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

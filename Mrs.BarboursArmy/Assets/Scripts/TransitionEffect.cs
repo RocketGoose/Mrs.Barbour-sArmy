@@ -15,7 +15,6 @@ public class TransitionEffect : MonoBehaviour
     void OnEnable()
     {
         ActivateTrigger.OnTrigger += DoTrigger;
-
     }
 
     void OnDisable()
@@ -49,6 +48,7 @@ public class TransitionEffect : MonoBehaviour
            // Debug.Log("Ray hit:" + hitName + " This:" + _thisName + hitName.Contains(_thisName));
         }
     }
+
     void Start()
     {
         material = GetComponent<MeshRenderer>().sharedMaterial;
