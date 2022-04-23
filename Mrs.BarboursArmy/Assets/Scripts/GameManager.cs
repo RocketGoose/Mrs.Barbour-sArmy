@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public GameObject hogWater;
     public GameObject hogFire;
 
+    public GameObject startButton;
+
     public int sceneInt;
     int lastSceneInt;
 
@@ -32,6 +34,8 @@ public class GameManager : MonoBehaviour
         hogEarth = GameObject.FindGameObjectWithTag("Earth");
         hogWater = GameObject.FindGameObjectWithTag("Water");
         hogFire = GameObject.FindGameObjectWithTag("Fire");
+
+        startButton = GameObject.FindGameObjectWithTag("StartButton");
 
         
         isControlLock = false;
