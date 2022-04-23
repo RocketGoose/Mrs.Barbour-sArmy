@@ -179,6 +179,8 @@ public class ControlScript : MonoBehaviour
 
          IEnumerator OutroSequenceSubs()
     {
+            //Placeholder
+            
             yield return new WaitForSeconds(5);
             textBox.GetComponent<TMP_Text>().text = "Several of the Hogbacks show signs of alteration throughout their history hinting at a potential history of reuse";
             yield return new WaitForSeconds(9);
