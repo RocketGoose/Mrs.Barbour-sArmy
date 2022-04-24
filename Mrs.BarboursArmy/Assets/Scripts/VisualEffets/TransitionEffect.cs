@@ -24,7 +24,7 @@ public class TransitionEffect : MonoBehaviour
     void DoTrigger(Vector3 triggerPoint, string hitName)
     {
         string _thisName = gameObject.name;
-        Debug.Log("Activate");
+        Debug.Log("VisualTransition:" + _thisName);
 
         if(_thisName.Contains(gameManager.hogAir.name) == true && gameManager.hogAirClicked == true)
         {

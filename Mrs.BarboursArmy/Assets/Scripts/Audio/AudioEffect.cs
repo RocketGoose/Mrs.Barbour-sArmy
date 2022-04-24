@@ -32,7 +32,7 @@ public class AudioEffect : MonoBehaviour
             {
                     isPlaying = true;
                     myAudioSource.Play();
-                    Debug.Log("Audio is playing");
+                    Debug.Log("Audio is playing" + cube);
             }
                         
 
