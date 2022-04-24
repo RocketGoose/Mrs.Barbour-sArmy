@@ -26,11 +26,30 @@ public class ControlScript : MonoBehaviour
     void OnEnable()
     {
         GameManager.OnSceneChange += CheckSceneInt;
+        ActivateTrigger.OnTrigger += CheckHogComplete;
     }
 
     void OnDisable()
     {
         GameManager.OnSceneChange -= CheckSceneInt;
+        ActivateTrigger.OnTrigger += CheckHogComplete;
+    }
+
+    void CheckHogComplete(Vector3 a, string b)
+    {
+        Debug.Log("starting hog ckeck");
+        if(gameManager.hogComplete == true)
+        {
+            Debug.Log("hog check is true");
+            StartCoroutine(IfHogComplete());
+        }
+    }
+
+    IEnumerator IfHogComplete()
+    {
+        Debug.Log("starting hog complete scene change");
+        yield return new WaitForSeconds(45);
+        gameManager.sceneInt ++;
     }
 
     void CheckSceneInt(int checkScene)
@@ -52,6 +71,11 @@ public class ControlScript : MonoBehaviour
 
           else if(checkScene == 0)
         {
+            gameManager.hogAirClicked = false;
+            gameManager.hogEarthClicked = false;
+            gameManager.hogFireClicked = false;
+            gameManager.hogWaterClicked = false;
+            gameManager.hogComplete = false;
             StartCoroutine(MenuSequence());
         }
     }
@@ -68,12 +92,6 @@ public class ControlScript : MonoBehaviour
 
         gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
 
-    }
-
-    
-    void Update()
-    {
-        
     }
 
     
@@ -103,7 +121,7 @@ public class ControlScript : MonoBehaviour
         StartCoroutine(IntroSequenceSubs());
 
         //Delay for Intro Audio
-        yield return new WaitForSeconds(56);   
+        yield return new WaitForSeconds(54);   
 
         gameManager.isControlLock = false;    
 
@@ -121,7 +139,7 @@ public class ControlScript : MonoBehaviour
         hogbacksAnimator.SetBool("HogBacks2", false);
         hogbackBAnimator.SetBool("HogbackB2", false);
 
-        gameManager.isControlLock = false;   
+         
 
         audio.PlayOneShot (outro);
         StartCoroutine(OutroSequenceSubs());
@@ -135,7 +153,7 @@ public class ControlScript : MonoBehaviour
 
     public IEnumerator OutroSequence()
     {
-
+        
         morphAnimator.SetBool("Morph3", true);
         hogbackBAnimator.SetBool("HogbackB3", true);
         yield return new WaitForSeconds(1);
@@ -143,6 +161,7 @@ public class ControlScript : MonoBehaviour
         hogbackBAnimator.SetBool("HogbackB3", false);
 
         gameManager.sceneInt = 0;
+        gameManager.isControlLock = false;  
     }
 
         IEnumerator IntroSequenceSubs()
@@ -177,32 +196,38 @@ public class ControlScript : MonoBehaviour
             yield return new WaitForSeconds(5);
     }
 
-         IEnumerator OutroSequenceSubs()
-    {
-            //Placeholder
-            
-            yield return new WaitForSeconds(5);
-            textBox.GetComponent<TMP_Text>().text = "Several of the Hogbacks show signs of alteration throughout their history hinting at a potential history of reuse";
-            yield return new WaitForSeconds(9);
-            //textBox.GetComponent<TMP_Text>().text ="";
-           // yield return new WaitForSeconds(1);
-            textBox.GetComponent<TMP_Text>().text = "One of the more notable changes seem to have involved the redesigning of the ‘endbeasts’ to resemble a singular creature ";
-            yield return new WaitForSeconds(5);
-            textBox.GetComponent<TMP_Text>().text ="";
-            yield return new WaitForSeconds(1);
-            textBox.GetComponent<TMP_Text>().text = "with the addition of distinguishable legs and one of the heads reversed to face outwards";
-            //textBox.GetComponent<TMP_Text>().text ="";
-            yield return new WaitForSeconds(3);
-            textBox.GetComponent<TMP_Text>().text = " indicating how even then the hogbacks may have been interpreted in different ways and how their usage may have varied throughout their existence.";
-            yield return new WaitForSeconds(3);
-            textBox.GetComponent<TMP_Text>().text = "Another interesting feature is what looks to be a hone or whetstone worked  into the ridge of one of the Hogbacks";
-            yield return new WaitForSeconds(5);
-            textBox.GetComponent<TMP_Text>().text ="";
-            yield return new WaitForSeconds(1);
-            textBox.GetComponent<TMP_Text>().text = "indicating these stones may have had other uses outside of burial sites.";
-            yield return new WaitForSeconds(13);
-          
-     }
+    IEnumerator OutroSequenceSubs()
+    { 
+        yield return new WaitForSeconds(5);
+        textBox.GetComponent<TMP_Text>().text = "The origins of the Govan Stones have been linked to Doomster Hill ";
+        yield return new WaitForSeconds(4);
+        textBox.GetComponent<TMP_Text>().text = "a nearby man-made mound that was flattened to make way for the Clyde shipyards";
+        yield return new WaitForSeconds(4);
+        textBox.GetComponent<TMP_Text>().text ="";
+        yield return new WaitForSeconds(1);
+        textBox.GetComponent<TMP_Text>().text = "Originally 45 stones were said to have been found in Govan however many were lost, destroyed, or damaged ";
+        yield return new WaitForSeconds(7);
+        //textBox.GetComponent<TMP_Text>().text ="";
+// yield return new WaitForSeconds(1);
+        textBox.GetComponent<TMP_Text>().text = "during the demolition of the neighbouring buildings, where they were mistaken for debris.";
+        yield return new WaitForSeconds(5);
+        textBox.GetComponent<TMP_Text>().text ="";
+        yield return new WaitForSeconds(1);
+        textBox.GetComponent<TMP_Text>().text ="This has made it difficult to determine the original locations of the Hogbacks which could have helped unravel some of the mystery around their origins";
+        yield return new WaitForSeconds(7);
+        textBox.GetComponent<TMP_Text>().text = "The Govan Hogbacks have seen much wear and tear both by time as well as negligence making it difficult to define what they may have actually been used for, ";
+        yield return new WaitForSeconds(8);
+        textBox.GetComponent<TMP_Text>().text =" while we may not know their exact origins";
+        yield return new WaitForSeconds(3);
+        textBox.GetComponent<TMP_Text>().text ="";
+        yield return new WaitForSeconds(1);
+        textBox.GetComponent<TMP_Text>().text ="what is clear is that these stone are an important part of the local history and may well be key to uncovering those parts still shrouded in mystery.";
+        yield return new WaitForSeconds(7);
+        textBox.GetComponent<TMP_Text>().text ="";
+        yield return new WaitForSeconds(1);
+
+        //yield return null;
+    }
 
 
 }

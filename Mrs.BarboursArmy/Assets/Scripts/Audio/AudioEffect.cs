@@ -7,6 +7,8 @@ public class AudioEffect : MonoBehaviour
 
     AudioSource myAudioSource;
 
+    GameManager gameManager;
+
     bool isPlaying;
 
 
@@ -30,9 +32,10 @@ public class AudioEffect : MonoBehaviour
         {
 
             {
-                    isPlaying = true;
-                    myAudioSource.Play();
-                    Debug.Log("Audio is playing" + cube);
+                isPlaying = true;
+                myAudioSource.Play();
+                Debug.Log("Audio is playing" + cube);
+                StartCoroutine(LockWhileAudio());
             }
                         
 
@@ -55,8 +58,14 @@ public class AudioEffect : MonoBehaviour
       
         myAudioSource = GetComponent<AudioSource>();
         isPlaying = false;
+        gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
        
     }
-
+    IEnumerator LockWhileAudio()
+    {
+        gameManager.isControlLock = true;
+        yield return new WaitForSeconds(42);
+        gameManager.isControlLock = false;
+    }
 
 }

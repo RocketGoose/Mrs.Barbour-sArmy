@@ -50,7 +50,7 @@ public class SubtitleEffect : MonoBehaviour
         
         if(hitObject.Contains(objectName)==true)
         {
-            if(objectName.Contains(gameManager.hogAir.name) == true  )
+            if(objectName.Contains(gameManager.hogAir.name) == true && gameManager.hogAirClicked == false)
             {
                 {   
                     Debug.Log("subtrigger:" + objectName);
@@ -59,7 +59,7 @@ public class SubtitleEffect : MonoBehaviour
                 }
             }
 
-            else if(objectName.Contains(gameManager.hogEarth.name) == true )
+            else if(objectName.Contains(gameManager.hogEarth.name) == true && gameManager.hogEarthClicked == false)
             {
                 {   
                     Debug.Log("subtrigger:" + objectName);
@@ -67,7 +67,7 @@ public class SubtitleEffect : MonoBehaviour
                     StartCoroutine(EarthSequence());  
                 }
             }
-            else if(objectName.Contains(gameManager.hogFire.name) == true )
+            else if(objectName.Contains(gameManager.hogFire.name) == true && gameManager.hogFireClicked == false)
             {
                 {   
                     Debug.Log("subtrigger:" + objectName);
@@ -75,7 +75,7 @@ public class SubtitleEffect : MonoBehaviour
                     StartCoroutine(FireSequence());  
                 }
             }
-            else if(objectName.Contains(gameManager.hogWater.name) == true )
+            else if(objectName.Contains(gameManager.hogWater.name) == true && gameManager.hogWaterClicked == false)
             {
                 {   
                     Debug.Log("subtrigger:" + objectName);
@@ -139,7 +139,7 @@ public class SubtitleEffect : MonoBehaviour
 
     IEnumerator AirSequence()
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(5);
         textBox.GetComponent<TMP_Text>().text = "Most of the Hogbacks feature a type of tegulation, a pattern of rectangular tiles";
         yield return new WaitForSeconds(4);
         //textBox.GetComponent<TMP_Text>().text ="";
@@ -159,7 +159,7 @@ public class SubtitleEffect : MonoBehaviour
         textBox.GetComponent<TMP_Text>().text ="";
         yield return new WaitForSeconds(1);
         textBox.GetComponent<TMP_Text>().text ="although in combination with the ‘endbeasts’ it might represent a creature guarding or protecting a home.";
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
         textBox.GetComponent<TMP_Text>().text ="";
         yield return new WaitForSeconds(1);
     }
@@ -167,7 +167,7 @@ public class SubtitleEffect : MonoBehaviour
 
     IEnumerator EarthSequence()
     {
-        yield return new WaitForSeconds(0);   
+        yield return new WaitForSeconds(5);   
         textBox.GetComponent<TMP_Text>().text = "Several of the Hogbacks show signs of alteration throughout their history hinting at a potential history of reuse";
         yield return new WaitForSeconds(5);
         textBox.GetComponent<TMP_Text>().text ="";
@@ -194,7 +194,7 @@ public class SubtitleEffect : MonoBehaviour
 
     IEnumerator FireSequence()
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(5);
         textBox.GetComponent<TMP_Text>().text = "A common detail amongst the Hogbacks is the depiction of beasts resemblant of dragons at either end of the stone";
         yield return new WaitForSeconds(7);
         //textBox.GetComponent<TMP_Text>().text ="";
@@ -215,7 +215,7 @@ public class SubtitleEffect : MonoBehaviour
     }
     IEnumerator WaterSequence()
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(5);
         textBox.GetComponent<TMP_Text>().text = "Many historians have linked the Hogbacks to the Scandinavian settlers that lived in Scotland during the time that the Hogbacks are thought to have been created. ";
         yield return new WaitForSeconds(8);
         //textBox.GetComponent<TMP_Text>().text ="";

@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public bool hogEarthClicked;
     public bool hogComplete;
 
-
     public GameObject hogAir;
     public GameObject hogEarth;
     public GameObject hogWater;
@@ -98,9 +97,18 @@ public class GameManager : MonoBehaviour
         if(hogAirClicked == true && hogEarthClicked == true && hogFireClicked == true && hogWaterClicked == true)
         {
             hogComplete = true;
-            sceneInt ++ ; 
             Debug.Log("HOG COMPLEAT!!!");
+
+            Debug.Log("hog check is true");
+            StartCoroutine(IfHogComplete());
         }
+    }
+
+    IEnumerator IfHogComplete()
+    {
+        Debug.Log("starting hog complete scene change");
+        yield return new WaitForSeconds(42);
+        sceneInt ++;
     }
 
 }

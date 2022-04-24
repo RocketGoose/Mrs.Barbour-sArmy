@@ -135,15 +135,15 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _TransitionStartTime: 142.42195
-    - _Trigger: 1
+    - _TransitionStartTime: 156.44203
+    - _Trigger: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - GlowColour: {r: 0.09385193, g: 0.16982731, b: 0.47372878, a: 0}
+    - GlowColour: {r: 0.3764706, g: 0.6745098, b: 1.8980392, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _TransitionPoint: {r: -6.0443726, g: -6.147478, b: 5.6195927, a: 0}
+    - _TransitionPoint: {r: -2.6410656, g: -6.567236, b: 4.865532, a: 0}
   m_BuildTextureStacks: []
