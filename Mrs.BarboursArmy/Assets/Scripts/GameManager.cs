@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public GameObject hogWater;
     public GameObject hogFire;
 
+    
+
     string hitName;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,8 @@ public class GameManager : MonoBehaviour
         hogEarth = GameObject.FindGameObjectWithTag("Earth");
         hogWater = GameObject.FindGameObjectWithTag("Water");
         hogFire = GameObject.FindGameObjectWithTag("Fire");
-
+    
+        
         
         isControlLock = false;
 

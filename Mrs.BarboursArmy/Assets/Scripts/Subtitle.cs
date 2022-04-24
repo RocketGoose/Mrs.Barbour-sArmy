@@ -1,101 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
+public class Subtitle : MonoBehaviour
+{    
 
-public class SubtitleEffect : MonoBehaviour
-{
+    //public enum MyEnum {AirSequence, WaterSequence, EarthSequence, FireSequence}
+   
     public GameObject textBox;
-
-    GameManager gameManager;
-
-   // bool isShowing;
-
-     void Start()
-    {
-        //StopAllCoroutines();
-        gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
         
-    }
-       
-    
-
-    // public void PlayFire() 
-    // {
-    //     StartCoroutine(FireSequence());
-    // }
-
-
-    
-    void OnEnable()
+    public  IEnumerator AirSequence()
     {
-        ActivateTrigger.OnTrigger += TriggerSubtitle;
-
-    }
-
-    void OnDisable()
-    {
-        ActivateTrigger.OnTrigger -= TriggerSubtitle;
-    }
-
-       void TriggerSubtitle(Vector3 triggerPoint, string audioObject )
-    {
-        string objectName = gameObject.name;
-        
-        
-
-        if (objectName.Contains(gameManager.hogAir.name) == true  )
-        {
-               
-                StopAllCoroutines();
-                StartCoroutine(AirSequence());  
             
-        }
-
-        if (objectName.Contains(gameManager.hogEarth.name) == true )
-        {
-               
-                StopAllCoroutines();
-                StartCoroutine(EarthSequence());  
-            
-        }
-       
-        if (objectName.Contains(gameManager.hogFire.name) == true )
-        {
-              
-                StopAllCoroutines();
-                StartCoroutine(FireSequence());  
+         
         
-        }
-
-        if (objectName.Contains(gameManager.hogWater.name) == true )
-        {
-              
-                StopAllCoroutines();
-                StartCoroutine(WaterSequence());  
-        
-        }
- 
-       /*     if   (audioObject.Contains(cube) == true)
-        {
-
-            {
-                  
-                StopCoroutine(IntroSequence());
-                Debug.Log("Subtitle stopped");
-                        
-            } 
-            
-
-        }*/   
-    } 
-
-
-    //delay lines
-        IEnumerator AirSequence()
-    {
             yield return new WaitForSeconds(0);
             textBox.GetComponent<TMP_Text>().text = "Most of the Hogbacks feature a type of tegulation, a pattern of rectangular tiles";
             yield return new WaitForSeconds(9);
@@ -125,11 +44,14 @@ public class SubtitleEffect : MonoBehaviour
             textBox.GetComponent<TMP_Text>().text ="";
             textBox.GetComponent<TMP_Text>().text = "The Govan Hogbacks have seen much wear and tear both by time as well as negligence making it difficult to divine what they may have actually been used for,";
             yield return new WaitForSeconds(5);
-            textBox.GetComponent<TMP_Text>().text = "yet if we may not know their exact origins what is clear is that these stone are an important part of the local history and may well be key to uncovering those parts still shrouded in mystery. ";
+            textBox.GetComponent<TMP_Text>().text = "yet while we may not know their exact origins what is clear is that these stone are an important part of the local history and may well be key to uncovering those parts still shrouded in mystery. ";
             yield return new WaitForSeconds(5);
-     }
 
-         IEnumerator EarthSequence()
+
+    }
+     
+
+    public IEnumerator EarthSequence()
     {
             yield return new WaitForSeconds(0);
             textBox.GetComponent<TMP_Text>().text = "Several of the Hogbacks show signs of alteration throughout their history hinting at a potential history of reuse";
@@ -154,29 +76,35 @@ public class SubtitleEffect : MonoBehaviour
           
     }
 
-      IEnumerator FireSequence()
+    public IEnumerator FireSequence()
     {
             yield return new WaitForSeconds(0);
             textBox.GetComponent<TMP_Text>().text = "A common detail amongst the Hogbacks is the depiction of beasts resemblant of dragons at either end of the stone";
-            yield return new WaitForSeconds(7);
+            yield return new WaitForSeconds(9);
             //textBox.GetComponent<TMP_Text>().text ="";
            // yield return new WaitForSeconds(1);
             textBox.GetComponent<TMP_Text>().text = "Often referred to as ‘endbeasts’, it is difficult to say what these creatures may actually have represented due to the weathering and damage done to the stones. ";
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(5);
             textBox.GetComponent<TMP_Text>().text ="";
             yield return new WaitForSeconds(1);
             textBox.GetComponent<TMP_Text>().text = "Each Hogback’s end-design is different. Some are more recognisable as creatures than others";
             //textBox.GetComponent<TMP_Text>().text ="";
             yield return new WaitForSeconds(3);
-            textBox.GetComponent<TMP_Text>().text = " if carved depictions of beasts are not uncommon amongst the Govan Stones it is unknown for what reason they are featured on the Hogbacks,";
-            yield return new WaitForSeconds(8);
+            textBox.GetComponent<TMP_Text>().text = " while carved depictions of beasts are not uncommon amongst the Govan Stones it is unknown for what reason they are featured on the Hogbacks,";
+            yield return new WaitForSeconds(3);
             textBox.GetComponent<TMP_Text>().text = "although some speculate they may have had some role as symbolic guardians.";
             yield return new WaitForSeconds(5);
+            textBox.GetComponent<TMP_Text>().text ="";
+            yield return new WaitForSeconds(1);
+            textBox.GetComponent<TMP_Text>().text = "Despite many similarities suggesting they were made by local carvers, all the stones have their own individual characteristics.";
+            yield return new WaitForSeconds(8);
+            textBox.GetComponent<TMP_Text>().text = "While they are often described as grave markers none of the stones have yet been linked to a specific burial site or";
+            yield return new WaitForSeconds(4);
            
-     }
+    }
 
-
-            private IEnumerator WaterSequence()
+    public IEnumerator WaterSequence()
+    
     {
             yield return new WaitForSeconds(0);
             textBox.GetComponent<TMP_Text>().text = "Many historians have linked the Hogbacks to the Scandinavian settlers that lived in Scotland during the time that the Hogbacks are thought to have been created. ";
@@ -194,6 +122,4 @@ public class SubtitleEffect : MonoBehaviour
             yield return new WaitForSeconds(3);
     }
       
-
-    
 }
