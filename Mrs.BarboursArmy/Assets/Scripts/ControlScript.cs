@@ -26,15 +26,16 @@ public class ControlScript : MonoBehaviour
     void OnEnable()
     {
         GameManager.OnSceneChange += CheckSceneInt;
-        ActivateTrigger.OnTrigger += CheckHogComplete;
+        //ActivateTrigger.OnTrigger += CheckHogComplete;
     }
 
     void OnDisable()
     {
         GameManager.OnSceneChange -= CheckSceneInt;
-        ActivateTrigger.OnTrigger += CheckHogComplete;
+        //ActivateTrigger.OnTrigger += CheckHogComplete;
     }
 
+    /*
     void CheckHogComplete(Vector3 a, string b)
     {
         Debug.Log("starting hog ckeck");
@@ -44,6 +45,7 @@ public class ControlScript : MonoBehaviour
             StartCoroutine(IfHogComplete());
         }
     }
+    
 
     IEnumerator IfHogComplete()
     {
@@ -51,7 +53,8 @@ public class ControlScript : MonoBehaviour
         yield return new WaitForSeconds(45);
         gameManager.sceneInt ++;
     }
-
+    */
+    
     void CheckSceneInt(int checkScene)
     {
         if(checkScene == 1)
