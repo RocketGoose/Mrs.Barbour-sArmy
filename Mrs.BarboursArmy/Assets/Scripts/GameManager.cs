@@ -12,20 +12,29 @@ public class GameManager : MonoBehaviour
     public bool hogEarthClicked;
     public bool hogComplete;
 
-
     public GameObject hogAir;
     public GameObject hogEarth;
     public GameObject hogWater;
     public GameObject hogFire;
 
+    public GameObject startButton;
+
+    public int sceneInt;
+    int lastSceneInt;
+
+    public delegate void SceneChange(int a);
+    public static event SceneChange OnSceneChange;
+
     string hitName;
-    // Start is called before the first frame update
+ 
     void Start()
     {
         hogAir = GameObject.FindGameObjectWithTag("Air");
         hogEarth = GameObject.FindGameObjectWithTag("Earth");
         hogWater = GameObject.FindGameObjectWithTag("Water");
         hogFire = GameObject.FindGameObjectWithTag("Fire");
+
+        startButton = GameObject.FindGameObjectWithTag("StartButton");
 
         
         isControlLock = false;
@@ -35,6 +44,19 @@ public class GameManager : MonoBehaviour
         hogFireClicked = false;
         hogWaterClicked = false;
         hogComplete = false;
+
+        sceneInt = 0;
+    }
+
+    void Update()
+    {
+
+        if (lastSceneInt != sceneInt)
+        {
+            OnSceneChange(sceneInt);
+            lastSceneInt = sceneInt;
+        }
+
     }
 
     void OnEnable()
@@ -76,12 +98,17 @@ public class GameManager : MonoBehaviour
         {
             hogComplete = true;
             Debug.Log("HOG COMPLEAT!!!");
+
+            Debug.Log("hog check is true");
+            StartCoroutine(IfHogComplete());
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator IfHogComplete()
     {
-        
+        Debug.Log("starting hog complete scene change");
+        yield return new WaitForSeconds(42);
+        sceneInt ++;
     }
+
 }
