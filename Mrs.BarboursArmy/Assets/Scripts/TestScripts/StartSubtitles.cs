@@ -5,11 +5,7 @@ using TMPro;
 
 public class StartSubtitles : MonoBehaviour
 {
-    public GameObject textBox;
-
-    GameManager gameManager;
-
-
+  
 }
 
 
