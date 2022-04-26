@@ -21,7 +21,7 @@ Material:
     m_TexEnvs: []
     m_Floats:
     - _ApplyDistance: 0
-    - _PointSize: 2
+    - _PointSize: 1.2
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_BuildTextureStacks: []

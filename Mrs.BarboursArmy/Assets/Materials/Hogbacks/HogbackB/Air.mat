@@ -109,7 +109,7 @@ Material:
     - Vector1_3cbe948afb1c446c8216d4cedb591764: 1
     - Vector1_813c00055b4945a384124239cb7d0c56: 0.7
     - Vector1_98eb1c010b8b44dcacb9ef4add7225f5: 0.1
-    - Vector1_Alpha: 1
+    - Vector1_Alpha: 0
     - Vector1_e1196877db0141c6951859d9c8a11ff6: 0.1
     - _AlphaClip: 0
     - _Blend: 0
