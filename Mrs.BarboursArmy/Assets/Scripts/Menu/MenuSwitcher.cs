@@ -47,10 +47,13 @@ public class MenuSwitcher : MonoBehaviour
     {
         if(gameManager.sceneInt > 0)
         {
-            foreach(GameObject obj in menuObjects) 
+            //Start Button & Trancept Point Cloud are now the same thing so it can't be turned off
+            
+            //foreach(GameObject obj in menuObjects) 
             {
-                obj.SetActive(false);
+                //obj.SetActive(false);
             }
+        
 
             hogAir.SetActive(true);
             hogEarth.SetActive(true);
