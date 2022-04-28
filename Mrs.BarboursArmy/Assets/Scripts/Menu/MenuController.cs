@@ -26,6 +26,8 @@ public class MenuController : MonoBehaviour
             MenuFunctions();
             Debug.Log("start menu functions");
         }
+        
+      
     }
 
     void MenuFunctions()
@@ -35,6 +37,15 @@ public class MenuController : MonoBehaviour
             Debug.Log("start button");
             gameManager.sceneInt ++ ;
         }
+
+        //Attempt
+        if (thisName.Contains(gameManager.aboutButton.name) == true)
+        {
+            Debug.Log("about button");
+            gameManager.aboutPanel.SetActive(true);
+            
+        }  
+        //
     }
     void Start()
     {

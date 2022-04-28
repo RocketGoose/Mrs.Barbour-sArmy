@@ -9,6 +9,10 @@ TagManager:
   - Fire
   - Water
   - StartButton
+  - HelpButton
+  - QuitButton
+  - AboutButton
+  - AboutPanel
   layers:
   - Default
   - TransparentFX

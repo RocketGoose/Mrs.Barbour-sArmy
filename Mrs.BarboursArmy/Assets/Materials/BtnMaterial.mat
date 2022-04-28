@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2801082114808023621
+--- !u!114 &-7101356753747531929
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,35 +20,19 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Air
-  m_Shader: {fileID: -6465566751694194690, guid: 7c2e557a1a11ee341aa1d9cabb524e26,
-    type: 3}
+  m_Name: BtnMaterial
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_6e31af3e3f014acebc9e2675c0176560:
-        m_Texture: {fileID: 2800000, guid: 774b756af1a986e478d06b3e47a2b347, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture2D_790a6393f8da45de8a1b96f0b0c8e35c:
-        m_Texture: {fileID: 2800000, guid: 870c466c06bf16748b6ffeb9f74a4de5, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture2D_bf1ba44f51394481bd6df819ad57932f:
-        m_Texture: {fileID: 2800000, guid: cb7522c5ec1ba8442aa9640208c2dcb4, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture2D_c26161c4fe9141a2824e276cad642282:
-        m_Texture: {fileID: 2800000, guid: 11970110ae46e2542b9fee1afe80420c, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -106,11 +90,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_3cbe948afb1c446c8216d4cedb591764: 1
-    - Vector1_813c00055b4945a384124239cb7d0c56: 0.7
-    - Vector1_98eb1c010b8b44dcacb9ef4add7225f5: 0.1
-    - Vector1_Alpha: 1
-    - Vector1_e1196877db0141c6951859d9c8a11ff6: 0.1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -135,15 +114,11 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _TransitionStartTime: 147.54298
-    - _Trigger: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - GlowColour: {r: 2.7427626, g: 6.0406013, b: 7.1785884, a: 0}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.15773465, g: 0.10693307, b: 0.254717, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _TransitionPoint: {r: -0.2099992, g: 0.34000015, b: 2.1243558, a: 0}
   m_BuildTextureStacks: []

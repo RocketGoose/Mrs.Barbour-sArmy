@@ -18,6 +18,14 @@ public class GameManager : MonoBehaviour
     public GameObject hogFire;
 
     public GameObject startButton;
+    
+    //Chloes Attempt
+    public GameObject aboutButton;
+    public GameObject helpButton;
+    public GameObject quitButton;
+
+    public GameObject aboutPanel;
+    //
 
     public int sceneInt;
     int lastSceneInt;
@@ -36,7 +44,12 @@ public class GameManager : MonoBehaviour
 
         startButton = GameObject.FindGameObjectWithTag("StartButton");
 
-        
+        aboutButton = GameObject.FindGameObjectWithTag("AboutButton");
+        helpButton = GameObject.FindGameObjectWithTag("HelpButton");
+        quitButton = GameObject.FindGameObjectWithTag("QuitButton");
+
+        aboutPanel = GameObject.FindGameObjectWithTag("AboutPanel");
+
         isControlLock = false;
 
         hogAirClicked = false;
