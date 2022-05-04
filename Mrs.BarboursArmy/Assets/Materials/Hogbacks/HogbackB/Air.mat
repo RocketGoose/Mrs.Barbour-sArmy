@@ -136,7 +136,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _TransitionStartTime: 122.28618
-    - _Trigger: 1
+    - _Trigger: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
