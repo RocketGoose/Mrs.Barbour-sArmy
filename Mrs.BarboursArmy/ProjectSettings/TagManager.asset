@@ -9,6 +9,11 @@ TagManager:
   - Fire
   - Water
   - StartButton
+  - Hogbacks
+  - Inside
+  - Outside
+  - FloatOutside
+  - HogbackB
   layers:
   - Default
   - TransparentFX

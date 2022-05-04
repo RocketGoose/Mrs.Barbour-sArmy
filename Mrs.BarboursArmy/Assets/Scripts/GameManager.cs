@@ -12,10 +12,16 @@ public class GameManager : MonoBehaviour
     public bool hogEarthClicked;
     public bool hogComplete;
 
+    public GameObject hogbackB;
     public GameObject hogAir;
     public GameObject hogEarth;
     public GameObject hogWater;
     public GameObject hogFire;
+
+    public GameObject hogbacks;
+    public GameObject floatOutside;
+    public GameObject inside;
+    public GameObject outside;
 
     public GameObject startButton;
 
@@ -33,9 +39,22 @@ public class GameManager : MonoBehaviour
         hogEarth = GameObject.FindGameObjectWithTag("Earth");
         hogWater = GameObject.FindGameObjectWithTag("Water");
         hogFire = GameObject.FindGameObjectWithTag("Fire");
+        hogbackB = GameObject.FindGameObjectWithTag("HogbackB");
 
         startButton = GameObject.FindGameObjectWithTag("StartButton");
 
+        hogbacks = GameObject.FindGameObjectWithTag("Hogbacks");
+        inside = GameObject.FindGameObjectWithTag("Inside");
+        outside = GameObject.FindGameObjectWithTag("Outside");
+        floatOutside = GameObject.FindGameObjectWithTag("FloatOutside");
+
+        hogbackB.SetActive(false);
+
+        hogbacks.SetActive(false);
+
+        inside.SetActive(false);
+        outside.SetActive(false);
+        floatOutside.SetActive(true);
         
         isControlLock = false;
 

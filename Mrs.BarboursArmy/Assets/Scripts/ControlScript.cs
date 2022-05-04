@@ -5,13 +5,11 @@ using TMPro;
 
 public class ControlScript : MonoBehaviour
 {
-
-    public GameObject morph; 
-    public GameObject hogBacks;
-    public GameObject hogBackB;
     public GameObject textBox;
 
-    Animator morphAnimator;
+    Animator floatOutAnimator;
+    Animator insideAnimator;
+    Animator outsideAnimator;
     Animator hogbacksAnimator;
     Animator hogbackBAnimator;
 
@@ -54,22 +52,30 @@ public class ControlScript : MonoBehaviour
         gameManager.sceneInt ++;
     }
     */
-    
+    void Start()
+    {
+        gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
+        floatOutAnimator = gameManager.floatOutside.GetComponent<Animator>();
+        insideAnimator = gameManager.inside.GetComponent<Animator>();
+        outsideAnimator = gameManager.outside.GetComponent<Animator>();
+        hogbacksAnimator = gameManager.hogbacks.GetComponent<Animator>();
+        hogbackBAnimator = gameManager.hogbackB.GetComponent<Animator>();
+        menuAmbiance = textBox.GetComponent<AudioSource>();
+        audio = GetComponent<AudioSource>();
+
+        menuAmbiance.Play(0);
+    }
+
     void CheckSceneInt(int checkScene)
     {
         if(checkScene == 1)
         {
-            StartCoroutine(IntroSequence());
+            StartCoroutine(ToScene1());
         }
 
         else if(checkScene == 2)
         {
-            StartCoroutine(IntractSequence());
-        }
-
-        else if(checkScene == 3)
-        {
-            StartCoroutine(OutroSequence());
+            StartCoroutine(ToScene2());
         }
 
           else if(checkScene == 0)
@@ -79,39 +85,38 @@ public class ControlScript : MonoBehaviour
             gameManager.hogFireClicked = false;
             gameManager.hogWaterClicked = false;
             gameManager.hogComplete = false;
-            StartCoroutine(MenuSequence());
+            StartCoroutine(ToScene0());
         }
     }
 
-    void Start()
+    public IEnumerator ToScene0()
     {
-        morphAnimator = morph.GetComponent<Animator>();
-        hogbacksAnimator = hogBacks.GetComponent<Animator>();
-        hogbackBAnimator = hogBackB.GetComponent<Animator>();
-        menuAmbiance = textBox.GetComponent<AudioSource>();
-        audio = GetComponent<AudioSource>();
-
-        menuAmbiance.Play(0);
-
-        gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
-
-    }
-
-    
-    public IEnumerator MenuSequence()
-    {
+        hogbackBAnimator.SetBool("isFadeOut", true);
+        outsideAnimator.SetBool("isFadeOut", true);
+        yield return new WaitForSeconds(5);
+        gameManager.hogbackB.SetActive(false);
+        gameManager.outside.SetActive(false);
+        gameManager.floatOutside.SetActive(true);
+        gameManager.isControlLock = false;  
         menuAmbiance.Play(0);
         yield return new WaitForSeconds(1);
         Debug.Log("MenuPlaying");
 
     }
     
-    public IEnumerator IntroSequence()
+    public IEnumerator ToScene1()
     {
-        menuAmbiance.Stop();
         gameManager.isControlLock = true;
 
+        floatOutAnimator.SetBool("isFadeOut", true);
+        yield return new WaitForSeconds(5);
+        gameManager.floatOutside.SetActive(false);
 
+        gameManager.inside.SetActive(true);
+        gameManager.hogbacks.SetActive(true);
+        gameManager.hogbackB.SetActive(true);
+
+        /*
         morphAnimator.SetBool("Morph1", true);
         hogbacksAnimator.SetBool("HogBacks1", true);
         hogbackBAnimator.SetBool("HogbackB1", true);
@@ -119,7 +124,8 @@ public class ControlScript : MonoBehaviour
         morphAnimator.SetBool("Morph1", false);
         hogbacksAnimator.SetBool("HogBacks1", false);
         hogbackBAnimator.SetBool("HogbackB1", false);
-
+        */
+        menuAmbiance.Stop();
         audio.PlayOneShot (intro);
         StartCoroutine(IntroSequenceSubs());
 
@@ -130,10 +136,18 @@ public class ControlScript : MonoBehaviour
 
     }
 
-    public IEnumerator IntractSequence()
+    public IEnumerator ToScene2()
     {
-        gameManager.isControlLock = true;   
+        gameManager.isControlLock = true; 
 
+        insideAnimator.SetBool("isFadeOut", true);
+        hogbacksAnimator.SetBool("isFadeOut", true);
+        yield return new WaitForSeconds(5);
+        gameManager.inside.SetActive(false);
+        gameManager.hogbacks.SetActive(false);
+
+        gameManager.outside.SetActive(true);
+        /*
         morphAnimator.SetBool("Morph2", true);
         hogbacksAnimator.SetBool("HogBacks2", true);
         hogbackBAnimator.SetBool("HogbackB2", true);
@@ -141,7 +155,7 @@ public class ControlScript : MonoBehaviour
         morphAnimator.SetBool("Morph2", false);
         hogbacksAnimator.SetBool("HogBacks2", false);
         hogbackBAnimator.SetBool("HogbackB2", false);
-
+        */
          
 
         audio.PlayOneShot (outro);
@@ -149,54 +163,46 @@ public class ControlScript : MonoBehaviour
 
         //Delay for Outro Audio
         yield return new WaitForSeconds(58);
-        
-        gameManager.sceneInt ++;
-
-    }
-
-    public IEnumerator OutroSequence()
-    {
-        
+        /*
         morphAnimator.SetBool("Morph3", true);
         hogbackBAnimator.SetBool("HogbackB3", true);
         yield return new WaitForSeconds(1);
         morphAnimator.SetBool("Morph3", false);
         hogbackBAnimator.SetBool("HogbackB3", false);
-
+        */
         gameManager.sceneInt = 0;
-        gameManager.isControlLock = false;  
     }
 
-        IEnumerator IntroSequenceSubs()
+    IEnumerator IntroSequenceSubs()
     {
-            yield return new WaitForSeconds(5);
-            textBox.GetComponent<TMP_Text>().text = "The Govan Stones represent a fusion of different carving styles depicting ‘Pictish’ horsemen and beasts, ‘Gaelic’ ringed crosses and ‘Angelian’ knots and interlace,";
-            yield return new WaitForSeconds(9);
-            //textBox.GetComponent<TMP_Text>().text ="";
-           // yield return new WaitForSeconds(1);
-            textBox.GetComponent<TMP_Text>().text = "creating a style unique to the area known as the ‘Govan School’ of stonecarving.";
-            yield return new WaitForSeconds(5);
-            textBox.GetComponent<TMP_Text>().text ="";
-            yield return new WaitForSeconds(1);
-            textBox.GetComponent<TMP_Text>().text = "Probably the most enigmatic amongst the 31 stones at Govan are a series of five";
-            //textBox.GetComponent<TMP_Text>().text ="";
-            yield return new WaitForSeconds(3);
-            textBox.GetComponent<TMP_Text>().text = "so-called ‘Hogback’ stones.";
-            yield return new WaitForSeconds(3);
-            textBox.GetComponent<TMP_Text>().text = "First mentioned in 1535 these types of stones have been found across the United Kingdom.";
-            yield return new WaitForSeconds(5);
-            textBox.GetComponent<TMP_Text>().text ="";
-            yield return new WaitForSeconds(1);
-            textBox.GetComponent<TMP_Text>().text = "Despite many similarities suggesting they were made by local carvers, all the stones have their own individual characteristics.";
-            yield return new WaitForSeconds(8);
-            textBox.GetComponent<TMP_Text>().text = "While they are often described as grave markers none of the stones have yet been linked to a specific burial site or";
-            yield return new WaitForSeconds(4);
-            //textBox.GetComponent<TMP_Text>().text ="";
-            //yield return new WaitForSeconds(1);
-            textBox.GetComponent<TMP_Text>().text = "feature inscriptions memorialising the dead, leaving many puzzled about their origins and usage.";
-            yield return new WaitForSeconds(5);
-            textBox.GetComponent<TMP_Text>().text ="";
-            yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(5);
+        textBox.GetComponent<TMP_Text>().text = "The Govan Stones represent a fusion of different carving styles depicting ‘Pictish’ horsemen and beasts, ‘Gaelic’ ringed crosses and ‘Angelian’ knots and interlace,";
+        yield return new WaitForSeconds(9);
+        //textBox.GetComponent<TMP_Text>().text ="";
+        // yield return new WaitForSeconds(1);
+        textBox.GetComponent<TMP_Text>().text = "creating a style unique to the area known as the ‘Govan School’ of stonecarving.";
+        yield return new WaitForSeconds(5);
+        textBox.GetComponent<TMP_Text>().text ="";
+        yield return new WaitForSeconds(1);
+        textBox.GetComponent<TMP_Text>().text = "Probably the most enigmatic amongst the 31 stones at Govan are a series of five";
+        //textBox.GetComponent<TMP_Text>().text ="";
+        yield return new WaitForSeconds(3);
+        textBox.GetComponent<TMP_Text>().text = "so-called ‘Hogback’ stones.";
+        yield return new WaitForSeconds(3);
+        textBox.GetComponent<TMP_Text>().text = "First mentioned in 1535 these types of stones have been found across the United Kingdom.";
+        yield return new WaitForSeconds(5);
+        textBox.GetComponent<TMP_Text>().text ="";
+        yield return new WaitForSeconds(1);
+        textBox.GetComponent<TMP_Text>().text = "Despite many similarities suggesting they were made by local carvers, all the stones have their own individual characteristics.";
+        yield return new WaitForSeconds(8);
+        textBox.GetComponent<TMP_Text>().text = "While they are often described as grave markers none of the stones have yet been linked to a specific burial site or";
+        yield return new WaitForSeconds(4);
+        //textBox.GetComponent<TMP_Text>().text ="";
+        //yield return new WaitForSeconds(1);
+        textBox.GetComponent<TMP_Text>().text = "feature inscriptions memorialising the dead, leaving many puzzled about their origins and usage.";
+        yield return new WaitForSeconds(5);
+        textBox.GetComponent<TMP_Text>().text ="";
+        yield return new WaitForSeconds(5);
     }
 
     IEnumerator OutroSequenceSubs()
@@ -231,6 +237,4 @@ public class ControlScript : MonoBehaviour
 
         //yield return null;
     }
-
-
 }

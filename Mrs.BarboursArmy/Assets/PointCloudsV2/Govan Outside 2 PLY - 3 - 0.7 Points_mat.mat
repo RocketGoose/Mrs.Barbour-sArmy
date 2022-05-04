@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Govan Outside PLY - 3 - 0.7 Points_mat
+  m_Name: Govan Outside 2 PLY - 3 - 0.7 Points_mat
   m_Shader: {fileID: 4800000, guid: 502a943cc9cc1401b953987c761f365e, type: 3}
   m_ShaderKeywords: _APPLYDISTANCE_ON
   m_LightmapFlags: 4

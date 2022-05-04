@@ -9,16 +9,20 @@ public class MenuSwitcher : MonoBehaviour
 
     public List<GameObject> menuObjects;
 
+    /*
     public GameObject hogAir;
     public GameObject hogEarth;
     public GameObject hogWater;
     public GameObject hogFire;
+    */
     void Start()
     {
+        /*
         hogAir = GameObject.FindGameObjectWithTag("Air");
         hogEarth = GameObject.FindGameObjectWithTag("Earth");
         hogWater = GameObject.FindGameObjectWithTag("Water");
         hogFire = GameObject.FindGameObjectWithTag("Fire");
+        */
 
         gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
 
@@ -26,11 +30,12 @@ public class MenuSwitcher : MonoBehaviour
         {
             menuObjects.Add(child.gameObject);
         }
-
+        /*
         hogAir.SetActive(false);
         hogEarth.SetActive(false);
         hogFire.SetActive(false);
         hogWater.SetActive(false);
+        */
     }
 
     void OnEnable()
@@ -47,18 +52,18 @@ public class MenuSwitcher : MonoBehaviour
     {
         if(gameManager.sceneInt > 0)
         {
-            //Start Button & Trancept Point Cloud are now the same thing so it can't be turned off
             
-            //foreach(GameObject obj in menuObjects) 
+            foreach(GameObject obj in menuObjects) 
             {
-                //obj.SetActive(false);
+                obj.SetActive(false);
             }
         
-
+            /*
             hogAir.SetActive(true);
             hogEarth.SetActive(true);
             hogFire.SetActive(true);
             hogWater.SetActive(true);
+            */
         }
 
         if(gameManager.sceneInt == 0)
@@ -67,11 +72,12 @@ public class MenuSwitcher : MonoBehaviour
             {
                 obj.SetActive(true);
             }
-
+            /*
             hogAir.SetActive(false);
             hogEarth.SetActive(false);
             hogFire.SetActive(false);
             hogWater.SetActive(false);
+            */
         }
     }
 }
