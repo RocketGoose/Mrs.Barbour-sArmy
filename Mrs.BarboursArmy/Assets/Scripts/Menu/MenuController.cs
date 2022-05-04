@@ -43,13 +43,37 @@ public class MenuController : MonoBehaviour
         {
             Debug.Log("about button");
             gameManager.aboutPanel.SetActive(true);
-            
-        }  
+            gameManager.backButton.SetActive(true);
+        }
+
+        if (thisName.Contains(gameManager.helpButton.name) == true)
+        {
+            Debug.Log("help button");
+            gameManager.helpPanel.SetActive(true);
+            gameManager.backButton.SetActive(true);
+
+        }
+
+        if (thisName.Contains(gameManager.backButton.name) == true)
+        {
+            Debug.Log("back button");
+            gameManager.aboutPanel.SetActive(false);
+            gameManager.helpPanel.SetActive(false);
+            gameManager.backButton.SetActive(false);
+
+        }
+
         //
     }
     void Start()
     {
         gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
         thisName = gameObject.name;
+
+        //
+        gameManager.aboutPanel.SetActive(false);
+        gameManager.helpPanel.SetActive(false);
+        gameManager.backButton.SetActive(false);
+        //
     }
 }

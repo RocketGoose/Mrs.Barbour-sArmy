@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public GameObject quitButton;
 
     public GameObject aboutPanel;
+    public GameObject helpPanel;
+    public GameObject backButton;
     //
 
     public int sceneInt;
@@ -44,11 +46,15 @@ public class GameManager : MonoBehaviour
 
         startButton = GameObject.FindGameObjectWithTag("StartButton");
 
+        //
         aboutButton = GameObject.FindGameObjectWithTag("AboutButton");
         helpButton = GameObject.FindGameObjectWithTag("HelpButton");
         quitButton = GameObject.FindGameObjectWithTag("QuitButton");
 
         aboutPanel = GameObject.FindGameObjectWithTag("AboutPanel");
+        helpPanel = GameObject.FindGameObjectWithTag("HelpPanel");
+        backButton = GameObject.FindGameObjectWithTag("BackButton");
+        //
 
         isControlLock = false;
 

@@ -13,6 +13,8 @@ TagManager:
   - QuitButton
   - AboutButton
   - AboutPanel
+  - BackButton
+  - HelpPanel
   layers:
   - Default
   - TransparentFX
