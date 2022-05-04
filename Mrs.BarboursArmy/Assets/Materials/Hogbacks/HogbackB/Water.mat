@@ -136,11 +136,11 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _TransitionStartTime: 65.56205
-    - _Trigger: 1
+    - _Trigger: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - GlowColour: {r: 0.3764706, g: 0.6745098, b: 1.8980392, a: 0}
+    - GlowColour: {r: 0.05160444, g: 0.47051185, b: 2.1880286, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
