@@ -44,6 +44,10 @@ public class MenuController : MonoBehaviour
             Debug.Log("about button");
             gameManager.aboutPanel.SetActive(true);
             gameManager.backButton.SetActive(true);
+
+            gameManager.helpButton.SetActive(false);
+            gameManager.aboutButton.SetActive(false);
+            gameManager.quitButton.SetActive(false);
         }
 
         if (thisName.Contains(gameManager.helpButton.name) == true)
@@ -51,6 +55,10 @@ public class MenuController : MonoBehaviour
             Debug.Log("help button");
             gameManager.helpPanel.SetActive(true);
             gameManager.backButton.SetActive(true);
+            
+            gameManager.helpButton.SetActive(false);
+            gameManager.aboutButton.SetActive(false);
+            gameManager.quitButton.SetActive(false);
 
         }
 
@@ -61,6 +69,17 @@ public class MenuController : MonoBehaviour
             gameManager.helpPanel.SetActive(false);
             gameManager.backButton.SetActive(false);
 
+            gameManager.helpButton.SetActive(true);
+            gameManager.aboutButton.SetActive(true);
+            gameManager.quitButton.SetActive(true);
+
+        }
+
+
+        if (thisName.Contains(gameManager.quitButton.name) == true)
+        {
+            Debug.Log("quit button");
+            Application.Quit();
         }
 
         //
