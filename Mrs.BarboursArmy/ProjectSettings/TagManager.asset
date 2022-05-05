@@ -9,11 +9,12 @@ TagManager:
   - Fire
   - Water
   - StartButton
-  - Hogbacks
-  - Inside
-  - Outside
-  - FloatOutside
-  - HogbackB
+  - HelpButton
+  - QuitButton
+  - AboutButton
+  - AboutPanel
+  - BackButton
+  - HelpPanel
   layers:
   - Default
   - TransparentFX

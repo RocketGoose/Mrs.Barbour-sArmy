@@ -24,6 +24,16 @@ public class GameManager : MonoBehaviour
     public GameObject outside;
 
     public GameObject startButton;
+    
+    //Chloes Attempt
+    public GameObject aboutButton;
+    public GameObject helpButton;
+    public GameObject quitButton;
+
+    public GameObject aboutPanel;
+    public GameObject helpPanel;
+    public GameObject backButton;
+    //
 
     public int sceneInt;
     int lastSceneInt;
@@ -43,19 +53,16 @@ public class GameManager : MonoBehaviour
 
         startButton = GameObject.FindGameObjectWithTag("StartButton");
 
-        hogbacks = GameObject.FindGameObjectWithTag("Hogbacks");
-        inside = GameObject.FindGameObjectWithTag("Inside");
-        outside = GameObject.FindGameObjectWithTag("Outside");
-        floatOutside = GameObject.FindGameObjectWithTag("FloatOutside");
+        //
+        aboutButton = GameObject.FindGameObjectWithTag("AboutButton");
+        helpButton = GameObject.FindGameObjectWithTag("HelpButton");
+        quitButton = GameObject.FindGameObjectWithTag("QuitButton");
 
-        hogbackB.SetActive(false);
+        aboutPanel = GameObject.FindGameObjectWithTag("AboutPanel");
+        helpPanel = GameObject.FindGameObjectWithTag("HelpPanel");
+        backButton = GameObject.FindGameObjectWithTag("BackButton");
+        //
 
-        hogbacks.SetActive(false);
-
-        inside.SetActive(false);
-        outside.SetActive(false);
-        floatOutside.SetActive(true);
-        
         isControlLock = false;
 
         hogAirClicked = false;
