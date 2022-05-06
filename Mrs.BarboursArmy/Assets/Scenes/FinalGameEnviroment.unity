@@ -686,7 +686,7 @@ PrefabInstance:
     - target: {fileID: 2737112725694104444, guid: 1ac066a5ea97e6b4b97058ae239d6562,
         type: 3}
       propertyPath: pointSize
-      value: 0.0005
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 2737112725694104444, guid: 1ac066a5ea97e6b4b97058ae239d6562,
         type: 3}
@@ -816,12 +816,12 @@ PrefabInstance:
     - target: {fileID: 530456526939413131, guid: 0e91ed036517df34bb8f987e20fdd6e4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -300
+      value: -163.37
       objectReference: {fileID: 0}
     - target: {fileID: 530456526939413132, guid: 0e91ed036517df34bb8f987e20fdd6e4,
         type: 3}
       propertyPath: m_text
-      value: 
+      value: xdtucibjhlbnjklfgty gyui bhlo gyuifeyub  hugyui gyuogtyu f
       objectReference: {fileID: 0}
     - target: {fileID: 530456526939413132, guid: 0e91ed036517df34bb8f987e20fdd6e4,
         type: 3}
@@ -1389,7 +1389,7 @@ PrefabInstance:
     - target: {fileID: 2737112725694104444, guid: 606beaf529234f547abfabda0d64091b,
         type: 3}
       propertyPath: mainColor.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2737112725694104444, guid: 606beaf529234f547abfabda0d64091b,
         type: 3}
@@ -1959,8 +1959,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renderType: 0
   brushType: 0
-  mainColor: {r: 1, g: 1, b: 1, a: 0}
-  pointSize: 0.02
+  mainColor: {r: 1, g: 1, b: 1, a: 1}
+  pointSize: 0.05
   applyDistance: 1
   blend: 0
   windDirection: {x: 0, y: 0, z: 0}
