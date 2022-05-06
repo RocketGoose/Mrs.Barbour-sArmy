@@ -42,14 +42,19 @@ public class GameManager : MonoBehaviour
     public static event SceneChange OnSceneChange;
 
     string hitName;
- 
-    void Start()
+
+    void Awake()
     {
         hogAir = GameObject.FindGameObjectWithTag("Air");
         hogEarth = GameObject.FindGameObjectWithTag("Earth");
         hogWater = GameObject.FindGameObjectWithTag("Water");
         hogFire = GameObject.FindGameObjectWithTag("Fire");
         hogbackB = GameObject.FindGameObjectWithTag("HogbackB");
+
+        hogbacks = GameObject.FindGameObjectWithTag("Hogbacks");
+        inside = GameObject.FindGameObjectWithTag("Inside");
+        outside = GameObject.FindGameObjectWithTag("Outside");
+        floatOutside = GameObject.FindGameObjectWithTag("FloatOutside");
 
         startButton = GameObject.FindGameObjectWithTag("StartButton");
 
@@ -60,13 +65,15 @@ public class GameManager : MonoBehaviour
 
         aboutPanel = GameObject.FindGameObjectWithTag("AboutPanel");
         helpPanel = GameObject.FindGameObjectWithTag("HelpPanel");
-        backButton = GameObject.FindGameObjectWithTag("BackButton");
+        backButton = GameObject.FindGameObjectWithTag("BackButton");  
+    }
+ 
+    void Start()
+    {
+
         //
 
-        hogbacks = GameObject.FindGameObjectWithTag("Hogbacks");
-        inside = GameObject.FindGameObjectWithTag("Inside");
-        outside = GameObject.FindGameObjectWithTag("Outside");
-        floatOutside = GameObject.FindGameObjectWithTag("FloatOutside");
+
 
         hogbackB.SetActive(false);
 

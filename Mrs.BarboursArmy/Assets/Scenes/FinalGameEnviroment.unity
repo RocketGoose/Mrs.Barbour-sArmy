@@ -224,8 +224,8 @@ MonoBehaviour:
   textBox: {fileID: 1108910018}
   menuAmbiance: {fileID: 1108910019}
   audio: {fileID: 293302561}
-  intro: {fileID: 8300000, guid: 48d3ea238019dc941961ac2bf6571a84, type: 3}
-  outro: {fileID: 8300000, guid: 64854cab6c5d092449004989783f526d, type: 3}
+  intro: {fileID: 8300000, guid: 6f3c58846cf999649ab2b8ecabcd44f9, type: 3}
+  outro: {fileID: 8300000, guid: c547584acd504c54ab200a686927d0d9, type: 3}
 --- !u!4 &293302560
 Transform:
   m_ObjectHideFlags: 0
@@ -492,7 +492,6 @@ GameObject:
   m_Component:
   - component: {fileID: 376850982}
   - component: {fileID: 376850984}
-  - component: {fileID: 376850983}
   m_Layer: 0
   m_Name: MenuCube
   m_TagString: StartButton
@@ -514,18 +513,6 @@ Transform:
   m_Father: {fileID: 408228932673903839}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &376850983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376850981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98233cc635c22124ab62f39ec66e561c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &376850984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1502,7 +1489,6 @@ GameObject:
   - component: {fileID: 408228932195642213}
   - component: {fileID: 408228932195642214}
   - component: {fileID: 408228932195642215}
-  - component: {fileID: 408228932195642212}
   m_Layer: 0
   m_Name: AboutPanel
   m_TagString: AboutPanel
@@ -1510,18 +1496,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &408228932195642212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408228932195642201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98233cc635c22124ab62f39ec66e561c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &408228932195642213
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1762,7 +1736,6 @@ GameObject:
   - component: {fileID: 408228932463444551}
   - component: {fileID: 408228932463444536}
   - component: {fileID: 408228932463444537}
-  - component: {fileID: 408228932463444550}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: BackButton
@@ -1770,18 +1743,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &408228932463444550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408228932463444539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98233cc635c22124ab62f39ec66e561c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &408228932463444551
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1813,6 +1774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 408228932673903839}
   - component: {fileID: 408228932673903824}
+  - component: {fileID: 408228932673903826}
   m_Layer: 0
   m_Name: Menu (1)
   m_TagString: Untagged
@@ -1820,6 +1782,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &408228932673903826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408228932673903825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98233cc635c22124ab62f39ec66e561c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &408228932673903839
 Transform:
   m_ObjectHideFlags: 0
@@ -1904,18 +1878,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &408228932674886035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408228932674886037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98233cc635c22124ab62f39ec66e561c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &408228932674886036
 Transform:
   m_ObjectHideFlags: 0
@@ -1943,7 +1905,6 @@ GameObject:
   - component: {fileID: 408228932674886032}
   - component: {fileID: 408228932674886033}
   - component: {fileID: 408228932674886034}
-  - component: {fileID: 408228932674886035}
   m_Layer: 0
   m_Name: QuitButton
   m_TagString: QuitButton
@@ -2361,7 +2322,7 @@ TextMesh:
   m_GameObject: {fileID: 408228933281228859}
   m_Text: "Thank you to Stuart Jeffrey and Michael\nMarriott for their assistance
     with this project.\n\nCreated by Magnus Fraser, Floris Van Manen,  \nChloe McMahon,
-    Sandra Shiami and Nicola Wundsch"
+    Sandra Shiami and Nicola W\xFCndsch"
   m_OffsetZ: 0
   m_CharacterSize: 0.5
   m_LineSpacing: 1
@@ -2407,18 +2368,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &408228933410874858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408228933410874863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98233cc635c22124ab62f39ec66e561c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &408228933410874859
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2508,7 +2457,6 @@ GameObject:
   - component: {fileID: 408228933410874859}
   - component: {fileID: 408228933410874860}
   - component: {fileID: 408228933410874861}
-  - component: {fileID: 408228933410874858}
   m_Layer: 0
   m_Name: AboutButton
   m_TagString: AboutButton
@@ -3110,18 +3058,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &408228933925646605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408228933925646607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98233cc635c22124ab62f39ec66e561c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &408228933925646606
 Transform:
   m_ObjectHideFlags: 0
@@ -3149,7 +3085,6 @@ GameObject:
   - component: {fileID: 408228933925646602}
   - component: {fileID: 408228933925646603}
   - component: {fileID: 408228933925646604}
-  - component: {fileID: 408228933925646605}
   m_Layer: 0
   m_Name: HelpButton
   m_TagString: HelpButton
@@ -3318,7 +3253,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 358d1f6a2ff0b03459abcdf37b8b6f13, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dadfcf6b7c3670f4984085abaae0d7cb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3759,7 +3694,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 99cf12cd76385604ea9d90417728a9a4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 45af211018054234189f26ec7a67d8b9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4286,7 +4221,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8cee5d9653ddb5a40ab1e77c833c14eb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 71f84bc9890503b4bbcd7ab9107b667a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4581,7 +4516,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1cfaedda8be57e74fb493906fb806a8b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8f00fd048da3a8049bc2e3d03cfd5231, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

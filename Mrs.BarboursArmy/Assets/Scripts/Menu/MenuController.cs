@@ -20,6 +20,7 @@ public class MenuController : MonoBehaviour
 
     void DoTrigger(Vector3 triggerPoint, string _hitName)
     {
+        thisName = _hitName;
         Debug.Log("menu triggered");
         if(_hitName.Contains(thisName) == true)
         {
