@@ -24,6 +24,16 @@ public class GameManager : MonoBehaviour
     public GameObject outside;
 
     public GameObject startButton;
+    
+    //Chloes Attempt
+    public GameObject aboutButton;
+    public GameObject helpButton;
+    public GameObject quitButton;
+
+    public GameObject aboutPanel;
+    public GameObject helpPanel;
+    public GameObject backButton;
+    //
 
     public int sceneInt;
     int lastSceneInt;
@@ -42,6 +52,16 @@ public class GameManager : MonoBehaviour
         hogbackB = GameObject.FindGameObjectWithTag("HogbackB");
 
         startButton = GameObject.FindGameObjectWithTag("StartButton");
+
+        //
+        aboutButton = GameObject.FindGameObjectWithTag("AboutButton");
+        helpButton = GameObject.FindGameObjectWithTag("HelpButton");
+        quitButton = GameObject.FindGameObjectWithTag("QuitButton");
+
+        aboutPanel = GameObject.FindGameObjectWithTag("AboutPanel");
+        helpPanel = GameObject.FindGameObjectWithTag("HelpPanel");
+        backButton = GameObject.FindGameObjectWithTag("BackButton");
+        //
 
         hogbacks = GameObject.FindGameObjectWithTag("Hogbacks");
         inside = GameObject.FindGameObjectWithTag("Inside");

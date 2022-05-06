@@ -9,6 +9,12 @@ TagManager:
   - Fire
   - Water
   - StartButton
+  - HelpButton
+  - QuitButton
+  - AboutButton
+  - AboutPanel
+  - BackButton
+  - HelpPanel
   - Hogbacks
   - Inside
   - Outside
